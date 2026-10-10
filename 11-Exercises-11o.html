@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11o</title>
+</head>
+<body>
+    <script>
+        // const array1 = ['hello','world','search','good'];
+        // const array2 = ['not', 'found'];
+        // let index = -1;
+
+        // for(let i=0; i<array1.length; i++) {
+        //     if(array1[i] == 'search') {
+        //         index = i
+        //         break;
+        //     }
+
+        // }
+
+        // console.log(`the index of search is ${index}`);
+
+        function findIndex(array, word) {
+            let index = -1;
+
+            for(let i=0; i< array.length; i++) {
+                if(array[i] == word) {
+                    index = i;
+                    break;
+                }
+            }
+
+            console.log(`the ${word} index is ${index}`);
+            return index;
+        }
+
+        // findIndex(['green', 'red', 'blue', 'red'], 'red');
+        // findIndex(['green', 'red', 'blue', 'red'], 'yellow');
+
+        function unique(array) {
+            let uniqueArray = []
+            
+            for(let j=0; j<array.length; j++) {
+                let duplicateWord = findIndex(uniqueArray, array[j]);
+                // console.log(duplicateWord);
+                if(duplicateWord === -1){
+                    uniqueArray.push(array[j]);
+                }
+            }
+            console.log(uniqueArray);
+        }
+
+        unique(['green', 'red', 'blue', 'red']);
+        unique(['red','green','green', 'red']);
+
+        // function removeEgg(foods) {
+        //     const result = [];
+        //     let eggs = 0;
+        //     let reverseFoods = foods.reverse();
+
+        //     for(let i=0; i< reverseFoods.length; i++){
+        //         if(reverseFoods[i] == 'egg' && eggs < 2) {
+        //             eggs++;
+        //             continue;
+        //         }
+        //         result.push(reverseFoods[i]);
+        //     }
+        //     console.log(result.reverse());
+        //     console.log(eggs);
+        // }
+
+        // removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+
+        // for(let i = 1; i<=20; i++) {
+        //     if(i % 3 == 0 && i % 5 != 0) {
+        //         console.log('Fizz');
+        //         continue;
+        //     } else if(i % 5 == 0 && i % 3 != 0) {
+        //         console.log('Buzz');
+        //         continue;
+        //     }else if(i % 3 == 0 && i % 5 == 0) {
+        //         console.log('FizzBuzz');
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+        
+    </script>
+</body>
+</html>

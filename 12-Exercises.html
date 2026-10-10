@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+
+    <!-- <button class="startButton" onclick="
+        ButtonELement.innerText = 'Loading';
+        setTimeout(change, 1000)">Start</button>
+
+    <button onclick="displayAdded()">
+        Add to cart
+    </button>
+    <p class="js-added"></p> -->
+
+    <button onclick="message += 1;
+    if(message === 1) {
+        startTitle();
+    }">Add</button>
+    <button onclick="decreaseNum()">Remove</button>
+    <script>
+        // //12a
+        // const add = function() {
+        //     console.log(2 + 3);
+        // }
+
+        // // add();
+        // // add();
+
+        // function runTwice(fun) {
+        //     let i = 0;
+        //     while(i < 2) {
+        //         fun();
+        //         i++;
+        //     }
+        // }
+
+        // runTwice(function() {console.log('12b')});
+        // runTwice(add);
+
+        // const ButtonELement = document.querySelector('.startButton');
+        // const change = function() {
+        //     ButtonELement.innerText = 'Finished';
+        // }
+
+        // const AddToCartText = document.querySelector('.js-added');
+
+        // let TimeOutID;
+
+        // function displayAdded() {
+        //     clearTimeout(TimeOutID);
+
+        //     AddToCartText.innerText = 'Added'
+
+        //     TimeOutID = setTimeout(function() {
+        //             AddToCartText.innerText = '';
+        //         }, 2000)
+        // }
+
+        let message = 2;
+        let titleID;
+
+        function startTitle() {
+            titleID = setInterval(function() {
+                if(document.title == 'App') {
+                    document.title = `(${message}) New message`;
+                } else {
+                    document.title = 'App';
+                }
+            }, 1000);
+        }
+        
+        startTitle();
+
+        function decreaseNum() {
+            if (message > 0) {
+                message -= 1;
+            }
+
+            if (message === 0) {
+                clearInterval(titleID);
+                document.title = 'App';
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        // const Nums = [10, 20, 30];
+        // Nums[2] = 99;
+        // console.log(Nums);
+
+        // function getLastValue(array) {
+        //     return array[array.length - 1];
+        // }
+
+        // console.log(getLastValue([1, 2, 3]))
+        // console.log(getLastValue(['abc', 'hello','world','mmm']))
+
+        // function arraySwap(array) {
+        //     const temp = array[0];
+        //     array[0] = array[array.length - 1];
+        //     array[array.length - 1] = temp;
+        //     return array;
+        // }
+
+        // console.log(arraySwap([5, 4, 3, 2, 1]));
+        // console.log(arraySwap(['a','b','c','d','e']));
+
+        // let num = []
+
+        // for(let i = 0; i<=10; i++) {
+        //     if (i % 2 === 0) {
+        //         num.push(i);
+        //     }
+        // }
+
+        // console.log(num);
+
+        
+        // for(let a = 5; a >= 0; a--){
+        //     console.log(a);
+        // }
+
+        // let array = [1, 2, 3];
+        // let newArray = [];
+        // for(let i = 0; i < 3; i++) {
+        //     let a = array[i] + 1;
+        //     newArray.push(a);
+        // }
+
+        // console.log(newArray);
+
+        function countWords(words) {
+            let a = {}
+            for(let i=0; i <= words.length ; i++){
+                if(a[words[i]]) {
+                    a[words[i]] += 1;
+                } else {
+                    a[words[i]] = 1;
+                }
+            }
+
+            return a;
+        }
+
+        console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+        
+
+    </script>
+</body>
+</html>

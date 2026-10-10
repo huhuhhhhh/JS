@@ -1,0 +1,14 @@
+        button{
+            font-family: Arial;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
